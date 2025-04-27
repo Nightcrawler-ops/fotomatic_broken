@@ -192,3 +192,8 @@ div .main-content {
   color: #9dc20a; /* text on hover */
   cursor: pointer; /* Changes cursor to pointer on hover */
 }
+#sign-up-section .button:active {
+  background-color: #9dc20a; /* Darker white on hover */
+  color: white; /* text on hover */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
