@@ -1,53 +1,194 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+  }
 }
 
-a {
-  color: black;
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  border-bottom: solid 1px #c6c1c1;
+  margin-bottom: 0;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.875rem;
+  background-color: white;
+  width: 96%;
+}
+
+header .desktop-logo {
+  font-family: 'roboto mono', monospace;
+  font-size: 24px;
+  color: #4a4a4a;
   text-decoration: none;
+  padding-left: 10px;
+}
+
+header .logo {
+  flex: 0;
+}
+
+.desktop ul {
+  font-family: 'roboto mono', monospace;
+  list-style: none;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  padding-left: 1rem;
+  margin-right: 0;
+  display: flex;
+  margin: 5px;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+header .icon {
+  width: 1rem; /* Adjust size as needed */
+  height: auto;
+  margin-left: 0; /* Space between icon and text */
+  vertical-align: middle; /* Aligns icon with text */
+  display: inline-block;
+  padding-right: 30px;
+}
+
+header .mobile {
+  display: none;
+}
+
+/*here goes the mobile view*/
+
+
+.main-content {
+  position: relative;
+  margin-top: 5rem;
+  padding: 0;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+div .main-content {
+  width: 100%;
+}
+.main-content img{
+  position: relative;
+  top: 0;
+  display: block;
+}
+
+
+/* signup section */
+#sign-up-section {
+  position: absolute; /* Makes the section float on top of the main content */
+  top: 30%; /* Adjusts the vertical position */
+  left: 10%; /* Centers the section horizontally */
+  background-color: #9dc20a; /* Green background */
+  color: white; /* White text for contrast */
+  padding: 50px; /* Adds spacing inside the banner */
+  border: 1px solid #979797; /* Optional: Rounds the corners */
+  border-radius: 4px; /* Optional: Rounds the corners */
+  z-index: 10; /* Ensures it appears above other elements */
+  text-align: center; /* Centers the text inside the banner */
+  width: 400px; /* Sets the width of the section */
+  height: 230px; /* Sets the height of the section */
+}
+
+#sign-up-section .header h2 {
+  font-size: 24px; /* Sets the font size for the heading */
+  margin-bottom: 0; /* Adds spacing below the heading */
+  font-family: cursive;
+  margin-top: 0; /* Removes default margins for headings */
+}
+#sign-up-section .header h1 {
+  margin: 0; /* Removes default margins for headings */
+  font-size: 40px; /* Sets the font size for the heading */
+  font-family: 'rubik-regular'; /* Sets font family for the heading */
+  line-height: 1.4; /* Adjusts line height for better readability */
+  margin-bottom: 5px; /* Adds spacing below the heading */
+}
+
+#sign-up-section .email {
+  font-size: 20px; /* Sets font size for the input text */
+  font-family: 'roboto-regular'; /* Sets font family for the input text */
+  line-height: 1.4; /* Adjusts line height for better readability */
+}
+#sign-up-section .button {
+  font-family: 'roboto-medium'; /* Sets font family for the button */
+  font-size: 20px; /* Sets font size for the button */
+  line-height: 64px; /* Matches the button height to vertically center text */
+  background-color: #4a4a4a; /* Dark gray background */
+  color: white; /* White text for contrast */
+  width: 300px; /* Sets the width of the button */
+  height: 64px; /* Sets the height of the button */
+  border-radius: 5px; /* Rounds the corners of the button */
+  margin-top: 15px; /* Adds spacing above the button */
+  text-align: center; /* Centers the text horizontally */
+  display: inline-block; /* Ensures proper alignment */
+  vertical-align: middle; /* Centers the text vertically */
+  text-transform: uppercase;
+}
+
+#sign-up-section .button:hover {
+  background-color: white; /* Darker white on hover */
+  color: #9dc20a; /* text on hover */
+  cursor: pointer; /* Changes cursor to pointer on hover */
 }
